@@ -119,9 +119,6 @@ for action_index in range(1, len(actions_chain)):
     for state_index in range(states_count):
         sum = 0.0
         for last_state_index in range(states_count):
-            # print(
-            #    f"Debug: {action_index}; {actions_chain[action_index]}; {len(actions_probabilities_matrix[state_index])}; {actions_probabilities_matrix[state_index][actions_chain[action_index]]}"
-            # )
             sum += (
                 trelis[action_index - 1][last_state_index]
                 * transitions_matrix[last_state_index][state_index]
